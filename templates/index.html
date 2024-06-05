@@ -1,0 +1,35 @@
+,<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is index page </title>
+</head>
+<body>
+     <center>
+         <h1>How to create crud Operaion</h1>
+         <h2>Django web frameWork</h2>
+         <hr/>
+ <a href ="{% url 'stinsert' %}">Add Student Record</a>
+         <table border="1">
+             <tr>
+                 <th>Student Id</th>
+                 <th>Student Name</th>
+                 <th>Email</th>
+                 <th>Address</th>
+                 <th>Mobile</th>
+                 <th>Gender</th>
+             </tr>
+             {% for displayst in crudst%}
+<tr>
+      {% endfor %}
+    <td>{{displayst.id}}</td>
+    <td>{{displayst.stname}}</td>
+    <td>{{displayst.stemail}}</td>
+    <td>{{displayst.staddress}}</td>
+    <td>{{displayst.stmobile}}</td>
+    <td>{{displayst.stgender}}</td>
+</tr>
+         </table>
+     </center>
+</body>
+</html>
